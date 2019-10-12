@@ -42,6 +42,7 @@ class AlphaDash
      */
     public function __construct(array $values)
     {
+        $test = '11';
         if (isset($values['value'])) {
             $this->message = $values['value'];
         }

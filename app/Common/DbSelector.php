@@ -30,7 +30,6 @@ class DbSelector implements DbSelectorInterface
     {
         $selectIndex  = (int)context()->getRequest()->query('id', 0);
         $createDbName = $connection->getDb();
-
         if ($selectIndex == 0) {
             $selectIndex = '';
         }
