@@ -63,6 +63,14 @@ class HomeController
     {
         return Context()->getResponse()->withContent("working233313");
     }
+
+
+    public function reStart()
+    {
+        $flag = (string)shell_exec("cd ~/swoft-v2ray && php bin/swoft http:restart -d");
+        return Context()->getResponse()->withContent($flag);
+    }
+
     /**
      * @RequestMapping("/hi")
      *
