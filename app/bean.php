@@ -112,7 +112,7 @@ return [
     'user'              => [
         'class'   => ServiceClient::class,
         'host'    => '127.0.0.1',
-        'port'    => 18307,
+        'port'    => 23334,
         'setting' => [
             'timeout'         => 0.5,
             'connect_timeout' => 1.0,
