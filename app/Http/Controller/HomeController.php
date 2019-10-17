@@ -48,7 +48,7 @@ class HomeController
      */
     public function pull():Response
     {
-        (string)$flag = exec("git");
+        (string)$flag = shell_exec("git");
 
         return Context()->getResponse()->withContent($flag);
     }
