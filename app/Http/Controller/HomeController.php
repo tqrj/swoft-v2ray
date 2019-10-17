@@ -42,13 +42,14 @@ class HomeController
 
 
     /**
-     * @RequestMapping("/test")
+     * @RequestMapping("/pull")
      * @return Response
      * @throws SwoftException
      */
-    public function test():Response
+    public function pull():Response
     {
-        return Context()->getResponse()->withContent('test');
+        $flag = exec("cd /swoft && git pull");
+        return Context()->getResponse()->withContent($flag);
     }
 
     /**
