@@ -54,7 +54,7 @@ class HomeController
     }
 
     /**
-     * @RequestMapping("test")
+     * @RequestMapping("/test")
      * @return Response|Swoft\Rpc\Server\Response
      * @throws SwoftException
      */
