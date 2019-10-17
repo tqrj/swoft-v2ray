@@ -48,7 +48,7 @@ class HomeController
      */
     public function pull():Response
     {
-        (string)$flag = shell_exec("git");
+        (string)$flag = shell_exec("cd /swoft-v2ray && git pull");
 
         return Context()->getResponse()->withContent($flag);
     }
