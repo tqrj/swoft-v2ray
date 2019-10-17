@@ -65,7 +65,7 @@ class HomeController
     }
 
     /**
-     * @RequestMapping("restart")
+     * @RequestMapping("/restart")
      * @return Response
      * @throws SwoftException
      */
