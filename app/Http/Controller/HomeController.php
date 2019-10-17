@@ -10,6 +10,7 @@
 
 namespace App\Http\Controller;
 
+use phpDocumentor\Reflection\Types\Context;
 use Swoft;
 use Swoft\Exception\SwoftException;
 use Swoft\Http\Message\ContentType;
@@ -37,6 +38,17 @@ class HomeController
         $content  = $renderer->render('home/index');
 
         return context()->getResponse()->withContentType(ContentType::HTML)->withContent($content);
+    }
+
+
+    /**
+     * @RequestMapping("/test")
+     * @return Response
+     * @throws SwoftException
+     */
+    public function test():Response
+    {
+        return Context()->getResponse()->withContent('test');
     }
 
     /**
