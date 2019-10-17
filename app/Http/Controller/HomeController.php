@@ -61,18 +61,7 @@ class HomeController
      */
     public function test():Response
     {
-        return Context()->getResponse()->withContent("working233313");
-    }
-
-    /**
-     * @RequestMapping("/restart")
-     * @return Response
-     * @throws SwoftException
-     */
-    public function reStart()
-    {
-        $flag = (string)shell_exec("cd ~/swoft-v2ray && php bin/swoft http:restart -d");
-        return Context()->getResponse()->withContent($flag);
+        return Context()->getResponse()->withContent("working");
     }
 
     /**
