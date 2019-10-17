@@ -53,16 +53,16 @@ class HomeController
         return Context()->getResponse()->withContent($flag);
     }
 
+
     /**
      * @RequestMapping("/test")
-     * @return Response|Swoft\Rpc\Server\Response
+     * @return Response
      * @throws SwoftException
      */
     public function test():Response
     {
-        return context()->getResponse()->withContent('wew');
+        return Context()->getResponse()->withContent("working");
     }
-
     /**
      * @RequestMapping("/hi")
      *
