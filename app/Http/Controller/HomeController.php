@@ -61,7 +61,7 @@ class HomeController
      */
     public function test():Response
     {
-        return Context()->getResponse()->withContent("working123");
+        return Context()->getResponse()->withContent("working2333");
     }
     /**
      * @RequestMapping("/hi")
