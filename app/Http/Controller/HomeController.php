@@ -41,17 +41,17 @@ class HomeController
     }
 
 
-    /**
-     * @RequestMapping("/pull")
-     * @return Response
-     * @throws SwoftException
-     */
-    public function pull():Response
-    {
-        $flag = shell_exec("cd ~/swoft-v2ray && git pull && php bin/swoft http:restart -d");
-        $flag = (string)$flag;
-        return Context()->getResponse()->withContent($flag);
-    }
+//    /**
+//     * @RequestMapping("/pull")
+//     * @return Response
+//     * @throws SwoftException
+//     */
+//    public function pull():Response
+//    {
+//        $flag = shell_exec("cd ~/swoft-v2ray && git pull && php bin/swoft http:restart -d");
+//        $flag = (string)$flag;
+//        return Context()->getResponse()->withContent($flag);
+//    }
 
 
     /**
@@ -61,7 +61,7 @@ class HomeController
      */
     public function test():Response
     {
-        return Context()->getResponse()->withContent("working111");
+        return Context()->getResponse()->withContent("let'S GO");
     }
 
     /**
