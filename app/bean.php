@@ -38,7 +38,7 @@ return [
     ],
     'httpServer'        => [
         'class'    => HttpServer::class,
-        'port'     => 80,
+        'port'     => 23333,
         'listener' => [
             'rpc' => bean('rpcServer')
         ],
