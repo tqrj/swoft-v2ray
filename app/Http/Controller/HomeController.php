@@ -10,7 +10,6 @@
 
 namespace App\Http\Controller;
 
-use phpDocumentor\Reflection\Types\Context;
 use Swoft;
 use Swoft\Exception\SwoftException;
 use Swoft\Http\Message\ContentType;
@@ -41,17 +40,17 @@ class HomeController
     }
 
 
-//    /**
-//     * @RequestMapping("/pull")
-//     * @return Response
-//     * @throws SwoftException
-//     */
-//    public function pull():Response
-//    {
-//        $flag = shell_exec("cd ~/swoft-v2ray && git pull && php bin/swoft http:restart -d");
-//        $flag = (string)$flag;
-//        return Context()->getResponse()->withContent($flag);
-//    }
+    /**
+     * @RequestMapping("/pull")
+     * @return Response
+     * @throws SwoftException
+     */
+    public function pull():Response
+    {
+        $flag = shell_exec("cd ~/swoft-v2ray && git pull && php bin/swoft http:reload -d");
+        $flag = (string)$flag;
+        return Context()->getResponse()->withContent($flag);
+    }
 
 
     /**
@@ -61,7 +60,7 @@ class HomeController
      */
     public function test():Response
     {
-        return Context()->getResponse()->withContent("Let's Go Go Go!!!");
+        return Context()->getResponse()->withContent("Let's Go Go Go!!!biubiubiu");
     }
 
     /**
