@@ -59,7 +59,7 @@ class HomeController
      */
     public function test():Response
     {
-        return Context()->getResponse()->withContent("Let's Go Go Go!!!biubiubiuO2O~~1");
+        return Context()->getResponse()->withContent("Let's Go Go Go!!!biubiubiuO2O~~2");
     }
 
     /**
